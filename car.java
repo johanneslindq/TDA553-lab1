@@ -35,27 +35,27 @@ public void setColor(Color clr){
     color = clr;
 }
 
-public void startEngine(){
+protected void startEngine(){
     currentSpeed = 0.1;
 }
 
-public void stopEngine(){
+protected void stopEngine(){
     currentSpeed = 0;
 }
 
 // TODO fix this method according to lab pm
-public void gas(double amount){
+protected void gas(double amount){
     incrementSpeed(amount);
 }
 
 // TODO fix this method according to lab pm
-public void brake(double amount){
+protected void brake(double amount){
     decrementSpeed(amount);
 }
 
-public abstract void incrementSpeed(double amount);
-public abstract void decrementSpeed(double amount);
-public abstract double speedFactor();
+protected abstract void incrementSpeed(double amount);
+protected abstract void decrementSpeed(double amount);
+protected abstract double speedFactor();
 
 
 }
