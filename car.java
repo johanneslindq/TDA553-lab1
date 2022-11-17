@@ -1,6 +1,5 @@
 
 import java.awt.*;
-import java.util.HashMap;
 
 public abstract class car implements movable{
 
@@ -96,14 +95,23 @@ protected void stopEngine(){
     currentSpeed = 0;
 }
 
-// TODO fix this method according to lab pm
 protected void gas(double amount){
-    incrementSpeed(amount);
+    if (amount > 0 && amount <= 1){
+        incrementSpeed(amount);
+    }
+    else{
+        System.out.println("Fel gas värde, värdet ska ligga mellan 0 och 1.");
+    }
 }
 
-// TODO fix this method according to lab pm
 protected void brake(double amount){
-    decrementSpeed(amount);
+
+    if (amount < 0 || amount > 1){
+        System.out.println("Fel broms värde, värdet ska ligga mellan 0 och 1.");
+    }
+    else{
+        decrementSpeed(amount);
+    }
 }
 
 protected abstract void incrementSpeed(double amount);
