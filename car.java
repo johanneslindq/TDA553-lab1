@@ -9,6 +9,13 @@ public double currentSpeed; // The current speed of the car
 public Color color; // Color of the car
 public String modelName; // The car model name
 
+public car(int nr_doors, Color car_color, int power, String model){
+    this.nrDoors = nr_doors;
+    this.color = car_color;
+    this.enginePower = power;
+    this.modelName = model;
+}
+
 public int getNrDoors(){
     return nrDoors;
 }
@@ -36,6 +43,8 @@ public void stopEngine(){
     currentSpeed = 0;
 }
 
+public abstract void incrementSpeed();
+public abstract void decrementSpeed();
 
 
 }
