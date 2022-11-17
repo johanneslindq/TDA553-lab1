@@ -9,8 +9,6 @@ public class Volvo240 extends car{
         stopEngine();
     }
     
-    
-    
     public double speedFactor(){
         return enginePower * 0.01 * trimFactor;
     }
@@ -23,13 +21,5 @@ public class Volvo240 extends car{
         currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);
     }
 
-    // TODO fix this method according to lab pm
-    public void gas(double amount){
-        incrementSpeed(amount);
-    }
-
-    // TODO fix this method according to lab pm
-    public void brake(double amount){
-        decrementSpeed(amount);
-    }
+    
 }
