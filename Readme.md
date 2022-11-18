@@ -1,1 +1,0 @@
-Johannes Lindqvist, Luqas Lundahl, Emil Svensjö
