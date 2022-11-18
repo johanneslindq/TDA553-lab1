@@ -6,7 +6,6 @@ public class Saab95 extends car{
     public Saab95(){
         super(2, Color.red, 125, "Saab95", 0, 0);
 	    this.turboOn = false;
-        stopEngine();
     }
 
     protected void setTurboOn(){
@@ -24,11 +23,11 @@ public class Saab95 extends car{
     }
 
     protected void incrementSpeed(double amount){
-        currentSpeed = getCurrentSpeed() + speedFactor() * amount;
+        currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount, getEnginePower());
     }
 
     protected void decrementSpeed(double amount){
-        currentSpeed = getCurrentSpeed() - speedFactor() * amount;
+        currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount, 0);
     }
     
 }
