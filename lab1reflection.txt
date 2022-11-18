@@ -1,0 +1,13 @@
+Explain how you chose the inheritance hierarchy in Task 1, making reference to the Open-Closed Principle.
+
+We chose to make an abstract super class with a constructor with attributes shared by both Volvo and Saab. We also moved in the shared methods to allow for 
+easier modification of them. We left incrementSpeed(), decrementSpeed(), and speedFactor() in the subclass since they are implemented differently between Saab and Volvo, however since they shared the same name we created an abstract method in the super class Car. By moving the shared methods into a absract super class we can easily modify the methods without having to do it twice (once in each subclass). Since the methods are protected they can only be accessed by the subclass. What this means in practice is that we can extend the method/ add more, without accidently modifyig the existing methods. 
+
+
+
+Explain how you implemented each of the sanity checks in Task 4.
+
+For gas and break we had simple if statements that checked if the value lied within the desired interval. We realized that in Volvo already contained a min and max function to check this while Saab needed implementation from outside.
+Since amount can't be negative it currentSpeed can't increase while you break and can't decrease while you gas.
+
+
