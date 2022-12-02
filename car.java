@@ -53,11 +53,11 @@ public void turnRight(){
 }
 
 
-protected void startEngine(){
+public void startEngine(){
     currentSpeed = 0.1;
 }
 
-protected void stopEngine(){
+public void stopEngine(){
     currentSpeed = 0;
 }
 
