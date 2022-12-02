@@ -1,4 +1,5 @@
 import java.awt.*;
+
 public abstract class TurboCar extends Car{
 
     private boolean turboOn;
@@ -9,7 +10,6 @@ public abstract class TurboCar extends Car{
 	    this.turboOn = false;
         this.turboValue = turboValue;
     }
-    
 
     public void setTurboOn(){
 	    turboOn = true;

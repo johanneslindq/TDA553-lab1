@@ -6,9 +6,5 @@ public class Saab95 extends TurboCar{
     }
 
     
-    
-    
-
-    
 }
 
