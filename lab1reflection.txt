@@ -1,7 +1,14 @@
 Explain how you chose the inheritance hierarchy in Task 1, making reference to the Open-Closed Principle.
 
-We chose to make an abstract super class with a constructor with attributes shared by both Volvo and Saab. We also moved in the shared methods to allow for 
-easier modification of them. We left incrementSpeed(), decrementSpeed(), and speedFactor() in the subclass since they are implemented differently between Saab and Volvo, however since they shared the same name we created an abstract method in the super class Car. By moving the shared methods into a absract super class we can easily modify the methods without having to do it twice (once in each subclass). Since the methods are protected they can only be accessed by the subclass. What this means in practice is that we can extend the method/ add more, without accidently modifyig the existing methods. 
+We chose to make an abstract super class with a constructor with attributes shared by both Volvo and Saab. We also moved in the shared methods to 
+allow for easier modification of them. We left incrementSpeed(), decrementSpeed(), and speedFactor() in the subclass since they are 
+implemented differently between Saab and Volvo, however since they shared the same name we created an abstract method in the super class Car. 
+By moving the shared methods into a absract super class we can easily modify the methods without having to do it twice (once in each subclass). 
+Since the methods are protected they can only be accessed by the subclass. We also made Turbo and Trim seperate subclasses which inherites methods 
+and attributes from Car since this allows for Open-Closed Principle in the sense that we can add more car models that have turbo or trim without 
+modifying the Volvo or Saab class. What this means in practice is that we can extend the method/add more, 
+without accidently modifyig the existing methods. This is in line with the Open-Closed Principle since as stated previously with the implementation
+and changes we made the code can easily be extended upon however with things such as protected methods and variables it's closed for modification. 
 
 
 
